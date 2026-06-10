@@ -5,7 +5,7 @@
 | | Link |
 |---|---|
 | **Presentation Video** | [▶ Watch Presentation](https://youtu.be/XXXXXXXXXXXX) |
-| **Demo Video** | [▶ Watch Demo](https://youtu.be/XXXXXXXXXXXX) |
+| **Demo Video** | [▶ Watch Demo](https://youtu.be/_6ZhD0knRlw) |
 
 ---
 
@@ -92,7 +92,7 @@ All of the following hardware components are required to run HARU.
 | Component | Model | Role | Connection |
 |---|---|---|---|
 | Main Computer | NVIDIA Jetson (aarch64, JetPack) | Runs the entire system | — |
-| Face Camera | Intel RealSense D435 | Captures user's face and gaze | USB → `/dev/video0` |
+| Face Camera | Intel RealSense SR300 | Captures user's face and gaze | USB → `/dev/video0` |
 | Body Camera | Logitech C270 | Captures user's torso and hand gestures | USB → `/dev/video4` |
 | Motor Adapter | ROBOTIS U2D2 | USB↔TTL converter for Dynamixel communication | USB → `/dev/ttyACM0` |
 | Servo Motors | Dynamixel XL / XM series × 9 | Drives all joints | 3-pin TTL daisy chain → U2D2 |
@@ -102,7 +102,7 @@ All of the following hardware components are required to run HARU.
 
 ```
 [Jetson USB Ports]
-   ├── USB ──▶ Intel RealSense D435 (/dev/video0)   ← Face / gaze camera
+   ├── USB ──▶ Intel RealSense SR300 (/dev/video0)   ← Face / gaze camera
    ├── USB ──▶ Logitech C270        (/dev/video4)   ← Body / gesture camera
    └── USB ──▶ U2D2 Adapter        (/dev/ttyACM0)  ← Dynamixel communication
 
@@ -262,7 +262,7 @@ Dynamixel hardware profile acceleration/velocity are set to 0, giving full traje
 | Platform | NVIDIA Jetson (aarch64, JetPack) |
 | VLM | Qwen3-VL-8B-Instruct (float16) |
 | Framework | ROS2, PyTorch 2.4/2.5 |
-| Cameras | Intel RealSense D435 + Logitech C270 |
+| Cameras | Intel RealSense SR300 + Logitech C270 |
 | Motors | Dynamixel Protocol 2.0 (×9) |
 
 ### 5.2 Evaluated Scenarios
